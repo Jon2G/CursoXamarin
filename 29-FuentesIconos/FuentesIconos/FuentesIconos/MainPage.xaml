@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:FuentesIconos.Fonts;assembly=FuentesIconos"
+             x:Class="FuentesIconos.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hola," FontFamily="FontAwesome"  FontSize="36"/>
+            <Label TextColor="LimeGreen" Text="{x:Static fonts:FontAwesome.MartiniGlassCitrus}" FontFamily="{x:Static fonts:FontAwesome.Solid}"  FontSize="36"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Booh! " FontFamily="FontAwesome"  FontSize="36"/>
+            <Label TextColor="Violet" Text="{x:Static fonts:FontAwesome.Ghost}" FontFamily="{x:Static fonts:FontAwesome.Solid}"  FontSize="36"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Siempre es hora para un café " FontFamily="FontAwesome"  FontSize="25"/>
+            <Label TextColor="RosyBrown" Text="{x:Static fonts:FontAwesome.MugHot}" FontFamily="{x:Static fonts:FontAwesome.Solid}"  FontSize="25"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Sígueme en:" FontFamily="FontAwesome"  FontSize="30"/>
+            <Label TextColor="Black" Text="{x:Static fonts:FontAwesome.Github}" FontFamily="{x:Static fonts:FontAwesome.Brands}"  FontSize="30"/>
+        </StackLayout>
+
+        
+    </StackLayout>
+
+</ContentPage>

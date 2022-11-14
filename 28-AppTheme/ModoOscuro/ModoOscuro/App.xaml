@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModoOscuro.App">
+    <Application.Resources>
+        <!--Paleta de colores-->
+        <Color x:Key="DarkPrimary">#303F9F</Color>
+        <Color x:Key="Primary">#3F51B5</Color>
+        <Color x:Key="LightPrimary">#C5CAE9</Color>
+        <Color x:Key="TextIcons">#FFFFFF</Color>
+        <Color x:Key="Accent">#009688</Color>
+        <Color x:Key="PrimaryText">#212121</Color>
+        <Color x:Key="DarkPrimaryText">White</Color>
+        <Color x:Key="SecondaryText">#757575</Color>
+        <Color x:Key="Dividers">#BDBDBD</Color>
+
+        <Color x:Key="DarkSecondaryBackground">LightGray</Color>
+        <Color x:Key="SecondaryBackground">WhiteSmoke</Color>
+
+        <Color x:Key="DarkBackground">Black</Color>
+        <Color x:Key="Background">White</Color>
+
+
+        <!--Inicio de tema-->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" 
+                    Value="{x:AppThemeBinding Dark={StaticResource DarkPrimaryText},Light={StaticResource PrimaryText}}"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkSecondaryBackground},Light={StaticResource SecondaryBackground}}"/>
+        </Style>
+
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkBackground},Light={StaticResource Background}}"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
