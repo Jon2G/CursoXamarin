@@ -5,14 +5,15 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace ApisNativas.iOS
-{
+namespace ApisNativas.iOS {
+
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+        public static UIApplication App;
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -24,7 +25,7 @@ namespace ApisNativas.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            AppDelegate.App = app;
             return base.FinishedLaunching(app, options);
         }
     }
