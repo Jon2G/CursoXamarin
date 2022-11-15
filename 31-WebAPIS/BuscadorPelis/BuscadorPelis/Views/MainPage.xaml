@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:BuscadorPelis.ViewModels;assembly=BuscadorPelis"
+             x:Class="BuscadorPelis.MainPage"
+             x:DataType="viewModels:MainPageViewModel">
+
+    <StackLayout >
+        <Frame BackgroundColor="#2196F3">
+            <Label Text="Buscador de peliculas con OMDb API" 
+                   FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+        </Frame>
+        <StackLayout Padding="10">
+            <SearchBar Placeholder="Ingresa el título..." SearchCommand="{Binding SearchCommand}" Text="{Binding TitleSearch}" />
+            <Grid>
+                <Frame>
+                    <ScrollView>
+                        <StackLayout>
+                            <Label Text="{Binding Movie.Title}"/>
+                            <Image Source="{Binding Movie.Poster}"/>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Lanzamiento:"/>
+                                <Label Text="{Binding Movie.Released}"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Clasificación:"/>
+                                <Label Text="{Binding Movie.Rated}"/>
+                            </StackLayout>
+
+
+                            <Label Text="Genero:"/>
+                            <Label Text="{Binding Movie.Genre}"/>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Director:"/>
+                                <Label Text="{Binding Movie.Director}"/>
+                            </StackLayout>
+
+                            <Label Text="Escritor:"/>
+                            <Label Text="{Binding Movie.Writer}"/>
+
+                            <Label Text="Actores:"/>
+                            <Label Text="{Binding Movie.Actors}"/>
+
+                            <Label Text="Trama:"/>
+                            <Label Text="{Binding Movie.Plot}"/>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Paises:"/>
+                                <Label Text="{Binding Movie.Country}"/>
+                            </StackLayout>
+
+                            <Label Text="Premios:"/>
+                            <Label Text="{Binding Movie.Awards}"/>
+
+
+                        </StackLayout>
+                    </ScrollView>
+                </Frame>
+                <ActivityIndicator  IsRunning="{Binding IsLoading}" Color="#2196F3"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
