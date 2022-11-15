@@ -123,13 +123,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\BuscadorPelis\BuscadorPelis.csproj">
-      <Project>{DF52B8E9-7B65-4FD1-9E4A-59AB0ABC9572}</Project>
+      <Project>{B94514E8-DBAD-4F61-90D7-D38409838F05}</Project>
       <Name>BuscadorPelis</Name>
     </ProjectReference>
   </ItemGroup>

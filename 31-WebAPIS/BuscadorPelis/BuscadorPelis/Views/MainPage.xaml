@@ -5,19 +5,24 @@
              x:Class="BuscadorPelis.MainPage"
              x:DataType="viewModels:MainPageViewModel">
 
-    <StackLayout >
+    <StackLayout VerticalOptions="FillAndExpand">
         <Frame BackgroundColor="#2196F3">
             <Label Text="Buscador de peliculas con OMDb API" 
                    FontSize="20" TextColor="White" HorizontalOptions="Center"/>
         </Frame>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" VerticalOptions="FillAndExpand">
             <SearchBar Placeholder="Ingresa el título..." SearchCommand="{Binding SearchCommand}" Text="{Binding TitleSearch}" />
-            <Grid>
-                <Frame>
-                    <ScrollView>
-                        <StackLayout>
+
+            <ActivityIndicator IsVisible="{Binding IsLoading}"
+                HeightRequest="300" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsLoading}" Color="#2196F3"/>
+
+                 <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand"
+                                    Padding="0"
+                                    VerticalScrollBarVisibility="Always">
+                        <StackLayout VerticalOptions="FillAndExpand"  
+                                     Padding="0" Margin="0">
                             <Label Text="{Binding Movie.Title}"/>
-                            <Image Source="{Binding Movie.Poster}"/>
+                            <Image HeightRequest="200" Source="{Binding Movie.Poster}"/>
 
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Lanzamiento:"/>
@@ -58,9 +63,7 @@
 
                         </StackLayout>
                     </ScrollView>
-                </Frame>
-                <ActivityIndicator  IsRunning="{Binding IsLoading}" Color="#2196F3"/>
-            </Grid>
+           
         </StackLayout>
     </StackLayout>
 </ContentPage>
