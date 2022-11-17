@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calaculadora.Android", "Calaculadora\Calaculadora.Android\Calaculadora.Android.csproj", "{3E4E6215-13F8-448F-919D-62EF0F9A6AF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora.Android", "Calaculadora\Calaculadora.Android\Calculadora.Android.csproj", "{3E4E6215-13F8-448F-919D-62EF0F9A6AF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calaculadora.iOS", "Calaculadora\Calaculadora.iOS\Calaculadora.iOS.csproj", "{C728A248-515D-408B-9DF4-70C981061A4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora.iOS", "Calaculadora\Calaculadora.iOS\Calculadora.iOS.csproj", "{C728A248-515D-408B-9DF4-70C981061A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calaculadora", "Calaculadora\Calaculadora\Calaculadora.csproj", "{1E6526CB-47E1-40DF-A0BD-6837C17440B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculadora", "Calaculadora\Calaculadora\Calculadora.csproj", "{1E6526CB-47E1-40DF-A0BD-6837C17440B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

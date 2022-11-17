@@ -57,8 +57,8 @@
     <PackageReference Include="Acr.UserDialogs">
       <Version>7.2.0.564</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -90,9 +90,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Calaculadora\Calaculadora.csproj">
-      <Project>{4D09C5CE-05E8-4846-9C13-CAAFFA36994C}</Project>
-      <Name>Calaculadora</Name>
+    <ProjectReference Include="..\Calaculadora\Calculadora.csproj">
+      <Project>{1E6526CB-47E1-40DF-A0BD-6837C17440B3}</Project>
+      <Name>Calculadora</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

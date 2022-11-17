@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Calaculadora
+namespace Calculadora
 {
     public partial class App : Application
     {

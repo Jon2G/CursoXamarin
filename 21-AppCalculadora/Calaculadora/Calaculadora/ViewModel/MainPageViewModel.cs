@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace Calaculadora.ViewModel
+namespace Calculadora.ViewModel
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {

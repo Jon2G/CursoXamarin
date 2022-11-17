@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Calaculadora.iOS
+namespace Calculadora.iOS
 {
     public class Application
     {

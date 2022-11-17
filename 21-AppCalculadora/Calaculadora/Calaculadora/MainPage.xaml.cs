@@ -1,7 +1,7 @@
-﻿using Calaculadora.ViewModel;
+﻿using Calculadora.ViewModel;
 using Xamarin.Forms;
 
-namespace Calaculadora
+namespace Calculadora
 {
     public partial class MainPage : ContentPage
     {

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Calaculadora.ViewModel"
+             xmlns:viewmodel="clr-namespace:Calculadora.ViewModel"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
-             x:Class="Calaculadora.MainPage" Title="Calculadora" BackgroundColor="Black"
+             x:Class="Calculadora.MainPage" Title="Calculadora" BackgroundColor="Black"
              x:DataType="viewmodel:MainPageViewModel">
 
     <StackLayout>
@@ -29,8 +29,6 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-
-
             <Button Grid.Row="0" Grid.Column="0" Text="AC"  FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"   Command="{Binding DeleteCommand}" CommandParameter="C"/>
             <Button Grid.Row="0" Grid.Column="1" Text="+/-" FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="!" />
             <Button Grid.Row="0" Grid.Column="2" Text="%"   FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="/"/>
@@ -51,12 +49,10 @@
             <Button Grid.Row="3" Grid.Column="2" Text="3"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"   Command="{Binding CalcularCommand}" CommandParameter="3"/>
             <Button Grid.Row="3" Grid.Column="3" Text="+"   FontSize="30" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="/" />
 
-
             <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="0" FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="0" />
             <Button Grid.Row="4" Grid.Column="2" Text="." FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="." />
             <Button Grid.Row="4" Grid.Column="3" Text="=" FontSize="35" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="="/>
 
         </Grid>
     </StackLayout>
-
 </ContentPage>
