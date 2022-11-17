@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Calaculadora.ViewModel"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Calaculadora.MainPage" Title="Calculadora" BackgroundColor="Black"
+             x:DataType="viewmodel:MainPageViewModel">
+
+    <StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand"  Margin="20">
+            <Label VerticalOptions="StartAndExpand"  HorizontalTextAlignment="End" FontSize="30" Text="{Binding Operacion}" TextColor="White"/>
+            <Label VerticalOptions="EndAndExpand" BackgroundColor="#1a1a1a" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontSize="40" Text="{Binding Resultado}" TextColor="white"/>
+        </StackLayout>
+
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="3" ColumnSpacing="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+
+            <Button Grid.Row="0" Grid.Column="0" Text="AC"  FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"   Command="{Binding DeleteCommand}" CommandParameter="C"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="+/-" FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="!" />
+            <Button Grid.Row="0" Grid.Column="2" Text="%"   FontSize="30" BackgroundColor="LightGray" TextColor="Black" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="/"/>
+            <Button Grid.Row="0" Grid.Column="3" Text="÷"   FontSize="30" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="÷"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="7"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5" Command="{Binding CalcularCommand}" CommandParameter="7" />
+            <Button Grid.Row="1" Grid.Column="1" Text="8"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="8"  />
+            <Button Grid.Row="1" Grid.Column="2" Text="9"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="9"  />
+            <Button Grid.Row="1" Grid.Column="3" Text="×"   FontSize="30" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="*"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="4"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="4" />
+            <Button Grid.Row="2" Grid.Column="1" Text="5"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="5"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="6"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="6"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="-"   FontSize="30" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="-" />
+
+            <Button Grid.Row="3" Grid.Column="0" Text="1"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="1" />
+            <Button Grid.Row="3" Grid.Column="1" Text="2"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="2" />
+            <Button Grid.Row="3" Grid.Column="2" Text="3"   FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"   Command="{Binding CalcularCommand}" CommandParameter="3"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="+"   FontSize="30" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="/" />
+
+
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="0" FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="0" />
+            <Button Grid.Row="4" Grid.Column="2" Text="." FontSize="30" BackgroundColor="Gray" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="." />
+            <Button Grid.Row="4" Grid.Column="3" Text="=" FontSize="35" BackgroundColor="Orange" TextColor="White" CornerRadius="5"  Command="{Binding CalcularCommand}" CommandParameter="="/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
