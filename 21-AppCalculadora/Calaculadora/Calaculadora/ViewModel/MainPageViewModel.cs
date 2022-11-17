@@ -10,7 +10,6 @@ namespace Calculadora.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string Operacion { get; set; }
-
         public string Resultado { get; set; }
 
         public ICommand DeleteCommand { get; set; }
