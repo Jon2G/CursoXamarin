@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:demo="clr-namespace:Demo;assembly=Demo"
+             x:Class="Demo.MainPage" x:DataType="{x:Type demo:MainPage}">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="El control Label" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Padding="20">
+            <Label Text="Label sencilla"/>
+
+            <Label Text="Label con color personalizado" TextColor="Blue"/>
+
+            <Label Text="Label con fondo personalizado" BackgroundColor="LightCyan"/>
+
+            <Label Text="Tamaño de fuente" FontSize="20"/>
+
+            <Label Text="Tamaño de fuente" FontSize="15"/>
+
+            <Label Text="Tamaño de fuente" FontSize="10"/>
+
+            <Label Text="Texto en negritas" FontAttributes="Bold" FontSize="20"/>
+
+            <Label Text="Texto en italicas" FontAttributes="Italic" FontSize="20"/>
+
+            <Label Text="Texto en italicas y negritas" FontAttributes="Italic,Bold" FontSize="20"/>
+
+            <Label Text="Alineación al centro" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20"/>
+            <Label Text="Alineación al principio" HorizontalTextAlignment="Start" FontSize="20"/>
+            <Label Text="Alineación al final" HorizontalTextAlignment="End" FontSize="20"/>
+
+            <Label Text="Texto tachado" FontSize="20" TextDecorations="Strikethrough"/>
+
+            <Label Text="Texto tachado" FontSize="20" TextDecorations="Underline"/>
+
+            <Label Text="Este texto esta volteado" Rotation="180" FontSize="20" HorizontalTextAlignment="End"/>
+
+            <Label Text="{Binding Texto}" FontSize="20" />
+
+
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
