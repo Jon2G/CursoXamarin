@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace Demo
 {
@@ -9,7 +7,6 @@ namespace Demo
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 
