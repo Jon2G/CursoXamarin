@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:demo="clr-namespace:Demo;assembly=Demo"
+          x:Class="Demo.AppShell">
+
+    <Shell.FlyoutContent>
+        <StackLayout>
+            <Button Text="Hola mundo" Clicked="Button_Clicked"/>
+            <Button Text="Acerca de.." Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </Shell.FlyoutContent>
+
+    <ShellContent>
+        <demo:MainPage/>
+    </ShellContent>
+
+</Shell>
