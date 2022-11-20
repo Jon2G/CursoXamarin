@@ -123,8 +123,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -132,5 +132,11 @@
       <Project>{B9FB77BA-604F-4E02-B9D4-EC0AE5194433}</Project>
       <Name>Demo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xamarin_mobile_apps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\giphy.gif" />
   </ItemGroup>
 </Project>
