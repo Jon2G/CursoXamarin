@@ -3,22 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <Grid BackgroundColor="AliceBlue" Padding="20">
+
+        <Grid RowDefinitions="*,*" ColumnDefinitions="*,*" BackgroundColor="DodgerBlue">
+
+            <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="CornflowerBlue"/>
+            <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="CadetBlue"/>
+            <Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="*,*,*,*" BackgroundColor="DeepSkyBlue">
+                <Grid Grid.Column="0" BackgroundColor="Green"/>
+                <Grid Grid.Column="1" BackgroundColor="GreenYellow"/>
+                <Grid Grid.Column="2" BackgroundColor="LawnGreen"/>
+                <Grid Grid.Column="3" BackgroundColor="LimeGreen"/>
+                <Grid Grid.Column="4" BackgroundColor="MediumSpringGreen"/>
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1"
+                  RowDefinitions="*,*,*,*" BackgroundColor="MediumSlateBlue">
+                <Grid Grid.Row="0" BackgroundColor="Yellow"/>
+                <Grid Grid.Row="1" BackgroundColor="LightGoldenrodYellow"/>
+                <Grid Grid.Row="2" BackgroundColor="LightYellow"/>
+                <Grid Grid.Row="3" BackgroundColor="NavajoWhite"/>
+                <Grid Grid.Row="4" BackgroundColor="PeachPuff"/>
+
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>
