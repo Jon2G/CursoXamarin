@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Demo
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
+        public TimeSpan Time { get; set; }
         public MainPage()
         {
+            Time = DateTime.Now.TimeOfDay;
+            this.BindingContext = this;
             InitializeComponent();
         }
     }

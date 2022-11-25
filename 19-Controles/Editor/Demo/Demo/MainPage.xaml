@@ -3,22 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="20" BackgroundColor="WhiteSmoke">
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Control Editor" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Padding="20" VerticalOptions="FillAndExpand">
+                <Editor Text=""/>
+
+                <Editor Text="Entry por defecto"/>
+
+                <Editor Text="" Placeholder="Entry con Placeholder"/>
+
+                <Editor Text="" Placeholder="Entry con Placeholder" PlaceholderColor="Red"/>
+
+                <Editor Text="Tamaño automático" AutoSize="TextChanges"/>
+
+                <Editor Text="Entry con estilo personalizado" BackgroundColor="AliceBlue" TextColor="Blue"/>
+
+                <Editor Text="Entry de solo lectura" IsReadOnly="True"/>
+
+                <Editor Text="Entry con estilo de texto y teclado telefónico"  FontAttributes="Bold,Italic" FontSize="30" Keyboard="Telephone"/>
+
+            </StackLayout>
+        </ScrollView>
+
+
     </StackLayout>
 
 </ContentPage>

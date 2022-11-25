@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Demo
 {
     public partial class MainPage : ContentPage
     {
+        public ICommand AddCommand { get; set; }
         public MainPage()
         {
+            AddCommand = new Command(Add);
+            this.BindingContext = this;
             InitializeComponent();
+        }
+
+        public void Add()
+        {
+            DisplayAlert("Swipe activado", "Agregar", "Ok");
         }
     }
 }

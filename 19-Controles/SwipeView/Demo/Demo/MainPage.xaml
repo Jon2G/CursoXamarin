@@ -1,24 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Demo.MainPage">
+             xmlns:demo="clr-namespace:Demo;assembly=Demo"
+             x:Class="Demo.MainPage"
+             x:DataType="demo:MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout Padding="20" BackgroundColor="WhiteSmoke">
+
+        <SwipeView BackgroundColor="LightGray">
+            <SwipeView.Content>
+                <Frame>
+                    <Label Text="Swipe simple"
+                           />
+                </Frame>
+            </SwipeView.Content>
+            <SwipeView.LeftItems>
+                <SwipeItem Text="Swipe izq." BackgroundColor="AliceBlue"/>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItem Text="Swipe der." BackgroundColor="LightGreen"/>
+            </SwipeView.RightItems>
+        </SwipeView>
+
+        <SwipeView BackgroundColor="LightGray">
+            <SwipeView.Content>
+                <Frame>
+                    <Label Text="Swipe multiple"
+                    />
+                </Frame>
+            </SwipeView.Content>
+            <SwipeView.LeftItems>
+                <SwipeItem Text="Swipe izq. 1" BackgroundColor="AliceBlue"/>
+                <SwipeItem Text="Swipe izq. 2" BackgroundColor="Blue"/>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItem Text="Swipe der. 1" BackgroundColor="LightGreen"/>
+                <SwipeItem Text="Swipe der. 2" BackgroundColor="Green"/>
+            </SwipeView.RightItems>
+        </SwipeView>
+
+        <SwipeView BackgroundColor="LightGray">
+            <SwipeView.Content>
+                <Frame>
+                    <Label Text="Swipe con iconos"
+                    />
+                </Frame>
+            </SwipeView.Content>
+            <SwipeView.LeftItems>
+                <SwipeItem Text="Swipe izq. 1" BackgroundColor="AliceBlue">
+                    <SwipeItem.IconImageSource>
+                        <FileImageSource  File="add.png"/>
+                    </SwipeItem.IconImageSource>
+                </SwipeItem>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItem Text="Swipe der. 1" IconImageSource="trash.png" BackgroundColor="LightGreen"/>
+                <SwipeItem Text="Swipe der. 2" IconImageSource="love.png" BackgroundColor="Firebrick"/>
+            </SwipeView.RightItems>
+        </SwipeView>
+
+        <SwipeView BackgroundColor="LightGray">
+            <SwipeView.Content>
+                <Frame>
+                    <Label Text="Swipe con comando"
+                    />
+                </Frame>
+            </SwipeView.Content>
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute">
+                    <SwipeItem Text="Swipe izq. 1" Command="{Binding AddCommand}" BackgroundColor="AliceBlue">
+                        <SwipeItem.IconImageSource>
+                            <FileImageSource  File="add.png"/>
+                        </SwipeItem.IconImageSource>
+                    </SwipeItem>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems Mode="Reveal">
+                    <SwipeItem Text="Swipe der. 1" IconImageSource="trash.png" BackgroundColor="LightGreen"/>
+                    <SwipeItem Text="Swipe der. 2" IsDestructive="True" IconImageSource="love.png" BackgroundColor="Firebrick"/>
+                </SwipeItems>
+            </SwipeView.RightItems>
+
+
+        </SwipeView>
+
     </StackLayout>
 
 </ContentPage>

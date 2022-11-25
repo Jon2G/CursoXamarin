@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Demo.ViewModels;
 using Xamarin.Forms;
 
 namespace Demo
@@ -12,6 +7,7 @@ namespace Demo
     {
         public MainPage()
         {
+            this.BindingContext = new MainPageViewModel();
             InitializeComponent();
         }
     }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="20">
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Control Entry" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
