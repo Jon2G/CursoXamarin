@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ListaAsistencia.ViewModels;assembly=ListaAsistencia"
+             xmlns:models="clr-namespace:ListaAsistencia.Models;assembly=ListaAsistencia"
+             x:Class="ListaAsistencia.Views.TomarAsistenciaView"
+             Title="Toma de asistencia"
+             x:DataType="viewModels:TomarAsistenciaViewModel">
+    <ContentPage.BindingContext>
+        <viewModels:TomarAsistenciaViewModel x:Name="Model"/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Confirmar" Command="{Binding ConfirmarCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="10">
+                <StackLayout>
+                    <Label Text="Toma de asistencia para el día:"/>
+                    <DatePicker Date="{Binding Fecha}" DateSelected="DatePicker_DateSelected"/>
+                </StackLayout>
+            </Frame>
+            <CollectionView ItemsSource="{Binding Asistencias}" Margin="10">
+                <CollectionView.EmptyView>
+                    <Grid VerticalOptions="FillAndExpand">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label FontSize="20" TextColor="{AppThemeBinding Dark=LightGray,Light=Gray}" Text="No hay alumnos registrados..."/>
+                        </StackLayout>
+                    </Grid>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Asistencia">
+                        <ContentView Padding="5" >
+                            <Frame Padding="5">
+                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding Alumno.PhotoSource}" 
+                                               WidthRequest="50"  Aspect="AspectFill"
+                                               HeightRequest="50"/>
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Boleta:" FontAttributes="Bold"/>
+                                                <Label Text="{Binding Alumno.Boleta}"/>
+                                            </StackLayout>
+                                            <StackLayout>
+                                                <Label Text="Nombre:" FontAttributes="Bold"/>
+                                                <Label Text="{Binding Alumno.Nombre}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                      
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="Asistencia:"/>
+                                        <Switch IsToggled="{Binding Asistio }"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

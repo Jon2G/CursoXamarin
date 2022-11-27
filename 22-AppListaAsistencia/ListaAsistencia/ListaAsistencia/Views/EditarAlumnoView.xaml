@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ListaAsistencia.ViewModels;assembly=ListaAsistencia"
+             xmlns:fonts="clr-namespace:ListaAsistencia.Fonts;assembly=ListaAsistencia"
+             xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="ListaAsistencia.Views.EditarAlumnoView"
+             x:DataType="viewModels:EditarAlumnoViewModel" Padding="20"
+             Title="Datos alumno">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Command="{Binding SaveCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="FillAndExpand" >
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fotografía:" FontAttributes="Bold" FontSize="18"
+                           HorizontalOptions="FillAndExpand"/>
+
+
+                </StackLayout>
+
+
+                <Grid Padding="0" Margin="0">
+
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center"
+                                 InputTransparent="True" CascadeInputTransparent="True">
+                        <Label Text="Presione para tomar fotografía" 
+                               VerticalOptions="Center" FontSize="18" 
+                               Padding="10"
+                               HorizontalOptions="Center" WidthRequest="190"
+                               LineBreakMode="WordWrap"/>
+                        <Image HeightRequest="40" VerticalOptions="End" HorizontalOptions="Center">
+                            <Image.Source>
+                                <FontImageSource Glyph="{x:Static fonts:FontAwesome.Camera}"
+                                                 FontFamily="{x:Static fonts:FontAwesome.Solid}"/>
+                            </Image.Source>
+                        </Image>
+                       
+                    </StackLayout>
+
+                    <ImageButton HeightRequest="200" WidthRequest="200"  Aspect="AspectFill"
+                                 Source="{Binding Photo}"
+                                 Command="{Binding TomarFotoCommand}"
+                                 HorizontalOptions="Center" CornerRadius="10"
+                                 VerticalOptions="Center" BackgroundColor="#4bc2c2c2">
+
+                    </ImageButton>
+
+                </Grid>
+                <Button 
+                    Text="Seleccionar foto" HeightRequest="35" Command="{Binding SeleccionarFotoCommand}"
+                    HorizontalOptions="End" FontSize="12" Padding="5" Margin="0"/>
+
+
+                <Label Text="* Boleta:" FontAttributes="Bold" FontSize="18"/>
+                <Entry Text="{Binding Boleta}"  FontSize="16"
+                       Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behaviors:TextValidationBehavior RegexPattern="([0-9]{10})"
+                                                          InvalidStyle="{StaticResource InvalidStyle}" />
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="* Nombre:" FontAttributes="Bold" FontSize="18"/>
+                <Entry Text="{Binding Nombre}"  FontSize="16">
+                    <Entry.Behaviors>
+                        <behaviors:TextValidationBehavior 
+                            RegexPattern="\w+"
+                            InvalidStyle="{StaticResource InvalidStyle}" />
+                    </Entry.Behaviors>
+                </Entry>
+
+                <StackLayout HeightRequest="50"/>
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

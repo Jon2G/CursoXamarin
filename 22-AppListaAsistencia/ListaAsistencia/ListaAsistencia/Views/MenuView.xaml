@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ListaAsistencia.ViewModels;assembly=ListaAsistencia"
+             x:Class="ListaAsistencia.Views.MenuView"
+             x:DataType="viewModels:MenuViewModel" Padding="20">
+    <ContentView.BindingContext>
+        <viewModels:MenuViewModel x:Name="Model"/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+      <StackLayout>
+          <Label Text="Toma de asistencias 2022" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+          <StackLayout HeightRequest="30"/>
+          <Button Text="Tomar asistencia" Command="{Binding TomarAsistenciaCommand}"/>
+
+
+          <StackLayout HeightRequest="30"/>
+            <Label Text="Desarrollado por:"/>
+          <Label Text="Jonathan García"/>
+
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

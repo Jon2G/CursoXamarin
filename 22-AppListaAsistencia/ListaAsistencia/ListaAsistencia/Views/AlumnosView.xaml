@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaAsistencia.Views.AlumnosView"
+             xmlns:viewModels="clr-namespace:ListaAsistencia.ViewModels"
+             xmlns:fonts="clr-namespace:ListaAsistencia.Fonts;assembly=ListaAsistencia"
+             xmlns:models="clr-namespace:ListaAsistencia.Models;assembly=ListaAsistencia"
+             x:DataType="viewModels:AlumnosViewModels"
+             Title="Alumnos" Shell.NavBarIsVisible="True" 
+             Shell.PresentationMode="ModalAnimated">
+    <ContentPage.BindingContext>
+        <viewModels:AlumnosViewModels x:Name="Model"/>
+    </ContentPage.BindingContext>
+    <Grid Padding="20" VerticalOptions="FillAndExpand">
+        
+
+        <CollectionView ItemsSource="{Binding Alumnos}"
+                        VerticalOptions="FillAndExpand">
+            <CollectionView.EmptyView>
+                <Grid VerticalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label FontSize="20" TextColor="{AppThemeBinding Dark=LightGray,Light=Gray}" Text="No hay alumnos registrados..."/>
+                    </StackLayout>
+                </Grid>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Alumno">
+                    <ContentView Padding="5" >
+                        <SwipeView>
+                            <Frame Padding="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding PhotoSource}" 
+                                           WidthRequest="50" Aspect="AspectFill"
+                                           HeightRequest="50"/>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Boleta:" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Boleta}"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="Nombre:" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Nombre}"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItem Command="{Binding EditarAlumnoCommand,Source={x:Reference Model} }" 
+                                               CommandParameter="{Binding .}" Text="Editar">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource 
+                                                FontFamily="{x:Static fonts:FontAwesome.Solid}" 
+                                                Glyph="{x:Static fonts:FontAwesome.Pencil}"/>
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
+
+                                    <SwipeItem BackgroundColor="Red" 
+                                               Command="{Binding EliminarAlumnoCommand,Source={x:Reference Model} }"
+                                               Text="Eliminar"
+                                               CommandParameter="{Binding .}">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource
+                                                FontFamily="{x:Static fonts:FontAwesome.Solid}" 
+                                                Glyph="{x:Static fonts:FontAwesome.Trash}"/>
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
+
+                                 
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                        </SwipeView>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+
+        <Button HeightRequest="60"  WidthRequest="60" CornerRadius="40"
+                Margin="5" HorizontalOptions="End" VerticalOptions="End"
+                FontFamily="{x:Static fonts:FontAwesome.Solid}" 
+                Text="{x:Static fonts:FontAwesome.CirclePlus}"
+                FontSize="30" Command="{Binding NuevoAlumnoCommand}"/>
+
+
+
+    </Grid>
+</ContentPage>
