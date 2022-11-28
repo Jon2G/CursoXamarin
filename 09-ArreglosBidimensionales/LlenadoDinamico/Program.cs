@@ -8,6 +8,7 @@ mEjemplo = new int[3, 4];
 //Creamos un objeto de la clase Random para generar números aleatorios
 Random random = new Random();
 
+
 //Bucle para recorrer las filas
 for (int fila = 0; fila < 3; fila++)
 {

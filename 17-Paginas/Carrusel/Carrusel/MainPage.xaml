@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Carrusel.MainPage">
+
+    <ContentPage BackgroundColor="Chartreuse">
+        <Label Text="Hola mundo"
+               FontSize="30"
+               TextColor="Black"/>
+    </ContentPage>
+
+    <ContentPage BackgroundColor="AliceBlue">
+        <Label Text="Pagina 2"
+               FontSize="30"
+               TextColor="Black"/>
+    </ContentPage>
+
+    <ContentPage BackgroundColor="LightGray">
+        <Label Text="Pagina 3"
+               FontSize="30"
+               TextColor="Black"/>
+    </ContentPage>
+
+</CarouselPage>

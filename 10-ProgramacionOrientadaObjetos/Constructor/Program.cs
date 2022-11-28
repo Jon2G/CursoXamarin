@@ -8,8 +8,11 @@ namespace Constructor
         {
             Persona persona1 = new Persona("Juan", "Perez");
             Persona persona2 = new Persona("Maria", "Gomez");
-            persona2.Nombre = "";
 
+            Persona persona3 = new Persona("", "");
+
+
+            persona2.ImprimirNombre();
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VistaTabular.MainPage">
+
+
+    <ContentPage Title="Acerca de...">
+        <Label Text="Pestaña #1" TextColor="Black"
+               FontSize="30"/>
+    </ContentPage>
+
+    <ContentPage Title="Principal">
+        <Label Text="Pestaña #2" TextColor="Black"
+               FontSize="30"/>
+    </ContentPage>
+
+    <ContentPage Title="Noticias">
+        <Label Text="Pestaña #3" TextColor="Black"
+               FontSize="30"/>
+    </ContentPage>
+
+
+</TabbedPage>

@@ -10,5 +10,10 @@
             Nombre = nombre;
             Apellidos = apellidos;
         }
+
+        public void ImprimirNombre()
+        {
+            Console.WriteLine(Nombre);
+        }
     }
 }

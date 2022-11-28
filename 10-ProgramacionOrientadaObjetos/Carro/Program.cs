@@ -1,6 +1,6 @@
 ﻿using Demo.Models;
 
-Carro Carro = new Carro()
+Carro auto = new Carro()
 {
     Color = "Rojo",
     Marca = "Toyota",
@@ -10,8 +10,11 @@ Carro Carro = new Carro()
     Detenido = true,
 };
 
-Carro.Acelerar();
-Carro.Acelerar();
+auto.Acelerar();
+auto.Acelerar();
 
-Carro.Frenar();
-Carro.Frenar();
+while (auto.Detenido == false)
+{
+    auto.Frenar();
+}
+
