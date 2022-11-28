@@ -45,7 +45,7 @@ namespace ListaAsistencia.ViewModels
                     alumno.PhotoSource = ImageSource.FromStream(() => new MemoryStream(photo));
                 }
 
-                var asistencia =
+                Asistencia asistencia =
                 AppData.Database.GetCollection<Asistencia>()
                     .Query()
                     .Where(x => x.IdAlumno == alumno.Id)

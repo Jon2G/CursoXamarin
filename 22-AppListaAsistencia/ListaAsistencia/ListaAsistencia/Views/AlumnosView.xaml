@@ -49,7 +49,8 @@
                             <SwipeView.RightItems>
                                 <SwipeItems Mode="Reveal">
                                     <SwipeItem Command="{Binding EditarAlumnoCommand,Source={x:Reference Model} }" 
-                                               CommandParameter="{Binding .}" Text="Editar">
+                                               CommandParameter="{Binding .}" Text="Editar"
+                                               BackgroundColor="Gray">
                                         <SwipeItem.IconImageSource>
                                             <FontImageSource 
                                                 FontFamily="{x:Static fonts:FontAwesome.Solid}" 
