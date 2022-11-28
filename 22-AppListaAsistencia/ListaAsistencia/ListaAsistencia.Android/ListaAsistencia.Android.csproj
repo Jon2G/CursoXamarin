@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -83,7 +82,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ListaAsistencia\ListaAsistencia.csproj">
-      <Project>{DB436941-4353-4F39-BDD4-0168E216C82C}</Project>
+      <Project>{63575E29-CAF9-4807-9550-B5E12CB84FE6}</Project>
       <Name>ListaAsistencia</Name>
     </ProjectReference>
   </ItemGroup>

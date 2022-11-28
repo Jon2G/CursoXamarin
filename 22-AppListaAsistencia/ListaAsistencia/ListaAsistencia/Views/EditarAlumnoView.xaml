@@ -56,7 +56,7 @@
 
                 <Label Text="* Boleta:" FontAttributes="Bold" FontSize="18"/>
                 <Entry Text="{Binding Boleta}"  FontSize="16"
-                       Keyboard="Numeric">
+                       Keyboard="Numeric" TextColor="{AppThemeBinding Dark=White,Light=Black}">
                     <Entry.Behaviors>
                         <behaviors:TextValidationBehavior RegexPattern="([0-9]{10})"
                                                           InvalidStyle="{StaticResource InvalidStyle}" />
