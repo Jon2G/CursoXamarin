@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contenedor.MainPage"
+             BackgroundColor="Purple"
+             Padding="20">
+
+    <ContentView BackgroundColor="PeachPuff"
+                 Padding="20">
+        <ContentView BackgroundColor="AliceBlue">
+
+            <Grid RowDefinitions="25*,45*,30*">
+                <Label Text="Bienvenidos"
+                       HorizontalTextAlignment="Start"
+                       FontSize="40" Grid.Row="0"/>
+                <Label Text="Bienvenidos"
+                       HorizontalTextAlignment="Center"
+                       FontSize="40" Grid.Row="1"/>
+                <Label Text="Bienvenidos"
+                       HorizontalTextAlignment="End"
+                       FontSize="40" Grid.Row="2"/>
+            </Grid>
+
+        </ContentView>
+    </ContentView>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarjeta.MainPage"
+             BackgroundColor="Purple"
+             Padding="10">
+    <Frame BackgroundColor="White">
+        <Frame BackgroundColor="PeachPuff"
+               Padding="50">
+            <Frame BackgroundColor="AliceBlue">
+
+                <StackLayout 
+                             BackgroundColor="SeaGreen">
+
+                    <Label Text="Bienvenidos"
+                           FontSize="30"
+                           TextColor="Black" 
+                           BackgroundColor="Gray"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="CenterAndExpand"/>
+
+                    <Label Text="Hola mundo" FontSize="40"
+                           TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+        </Frame>
+    </Frame>
+</ContentPage>

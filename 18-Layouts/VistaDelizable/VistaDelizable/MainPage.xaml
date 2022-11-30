@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VistaDelizable.MainPage"
+             BackgroundColor="Purple"
+             Padding="20">
+
+    <ScrollView 
+        BackgroundColor="Green">
+        <!-- 
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis convallis sapien ut euismod. Nullam egestas tempus nisi nec rhoncus. Praesent condimentum mattis ex porta maximus. Nullam sed volutpat est, at aliquet tellus. Cras at est augue. Sed vel turpis vitae lectus pretium vehicula. Cras tempus commodo ornare. Sed ullamcorper purus vel ultrices tincidunt. Maecenas nec ex ac ligula euismod aliquam vitae in risus. Mauris et sapien nec ante lobortis pretium eu ac metus. Duis nec nisl rutrum, ultricies massa et, luctus nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." 
+               FontSize="40"/> 
+        -->
+        <Grid RowDefinitions="200,200,200,200,200,200,200">
+
+            <Frame BackgroundColor="DarkGray" Grid.Row="0">
+                <Label Text="Primer tarjeta del scrollview"
+                       FontSize="40"/>
+            </Frame>
+
+            <Frame BackgroundColor="White" Grid.Row="1"/>
+
+            <Frame BackgroundColor="DarkGray" Grid.Row="2"/>
+
+            <Frame BackgroundColor="White" Grid.Row="3"/>
+
+            <Frame BackgroundColor="DarkGray" Grid.Row="4"/>
+
+            <Frame BackgroundColor="White" Grid.Row="5"/>
+
+            <Frame BackgroundColor="DarkGray" Grid.Row="6"/>
+
+            <Frame BackgroundColor="White" Grid.Row="7"/>
+
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

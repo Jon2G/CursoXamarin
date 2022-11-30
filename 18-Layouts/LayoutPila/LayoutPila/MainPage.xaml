@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutPila.MainPage">
+
+    <StackLayout BackgroundColor="#4d465e"
+                 Padding="20">
+
+        <!--Primer bloque-->
+        <StackLayout BackgroundColor="CornflowerBlue"
+                     Orientation="Horizontal"
+                     Padding="20">
+            <Label Text="1-1"
+                   TextColor="White"
+                   FontSize="40"/>
+
+            <!--2-1-->
+            <StackLayout BackgroundColor="Blue" Padding="20">
+                <Label Text="2-1" TextColor="White"
+                       FontSize="40"/>
+            </StackLayout>
+            <!--2-2-->
+            <StackLayout BackgroundColor="AliceBlue" 
+                         Padding="20">
+                <Label Text="2-2" 
+                       FontSize="40"/>
+            </StackLayout>
+        </StackLayout>
+        <!--Segundo bloque-->
+        <StackLayout BackgroundColor="LimeGreen"
+                     Padding="20">
+            <Label Text="1-2" 
+                   TextColor="White"
+                   FontSize="40"/>
+            <StackLayout BackgroundColor="Purple"
+                         Padding="20">
+                <Label Text="2-1" TextColor="White" FontSize="40"/>
+
+                <StackLayout Padding="20" 
+                             BackgroundColor="LightYellow"
+                             Orientation="Horizontal">
+                    <Label Text="2-2" FontSize="40"/>
+
+                    <StackLayout  Padding="20" 
+                                  BackgroundColor="Green">
+                        <Label Text="2-3" FontSize="40"/>
+                    </StackLayout>
+                    <StackLayout Padding="20"
+                                 BackgroundColor="LightGreen">
+                        <Label Text="2-4" FontSize="40"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </StackLayout>
+
+</ContentPage>

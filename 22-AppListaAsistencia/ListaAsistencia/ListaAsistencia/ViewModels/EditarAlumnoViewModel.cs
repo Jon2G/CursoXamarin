@@ -120,27 +120,6 @@ namespace ListaAsistencia.ViewModels
             }
         }
 
-        async Task TakePhotoAsync()
-        {
-            try
-            {
-                var photo = await MediaPicker.CapturePhotoAsync();
-                await LoadPhotoAsync(photo);
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature is not supported on the device
-            }
-            catch (PermissionException pEx)
-            {
-                // Permissions not granted
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
-            }
-        }
-
         private async Task LoadPhotoAsync(FileResult photo)
         {
             // canceled
