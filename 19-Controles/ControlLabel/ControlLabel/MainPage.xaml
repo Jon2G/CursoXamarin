@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlLabel.MainPage"
+             Padding="50">
+    <StackLayout BackgroundColor="CadetBlue">
+        <Label Text="Texto en negritas"
+               FontSize="Subtitle"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+        <Label Text="Texto en italicas"
+               FontSize="30"
+               TextColor="Black"
+               FontAttributes="Italic"
+               HorizontalOptions="End"/>
+        <Label Text="Texto tachado"
+               FontSize="30"
+               TextColor="Black"
+               TextDecorations="Strikethrough"/>
+        <Label Text="Texto tachado"
+               FontSize="30"
+               TextColor="Black"
+               TextDecorations="Underline"/>
+        <Label Text="Texto de ejemplo"
+               FontSize="30"
+               TextColor="Black"
+               BackgroundColor="Blue"
+               FontAttributes="Bold,Italic"
+               TextDecorations="Underline,Strikethrough"/>
+        <StackLayout Orientation="Horizontal" 
+                     BackgroundColor="Aquamarine"
+                     HeightRequest="100">
+            <Label Text="Inicio" FontSize="30"
+                   VerticalTextAlignment="Start"/>
+            <Label Text="Centrado" FontSize="30" 
+                   VerticalTextAlignment="Center"/>
+            <Label Text="Final" FontSize="30"
+                   VerticalTextAlignment="End"/>
+        </StackLayout>
+
+        <Label Text="Texto dinámico" FontSize="30" x:Name="LblDinamico"/>
+        <Button Text="Presiona para cambiar el texto" Clicked="Button_Clicked"/>
+
+    </StackLayout>
+</ContentPage>
