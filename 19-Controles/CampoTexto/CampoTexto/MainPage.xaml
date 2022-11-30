@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:CampoTexto.Fonts"
+             x:Class="CampoTexto.MainPage" Padding="20">
+
+    <Frame>
+        <StackLayout>
+            <Label Text="Incio de sesión" 
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="25"/>
+
+            <Label Text="Usuario:" FontSize="20" 
+                   TextColor="Black" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingresa tu usuario"
+                   FontSize="20" x:Name="TxtUsuario"/>
+
+            <Label Text="Contraseña:" FontSize="20" 
+                   TextColor="Black" FontAttributes="Bold"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="Ingresa una contraseña" 
+                       FontSize="20" IsPassword="True"
+                       x:Name="TxtPassword"/>
+                <Button Text="{x:Static fonts:FontAwesome.Eye}" 
+                        FontFamily="FA-SOLID" x:Name="BtnVer"
+                        FontSize="30" TextColor="Blue"
+                        Clicked="MostrarOcultarPassword"/>
+            </StackLayout>
+
+            <Button Text="Inciar sesión" 
+                    Clicked="Button_Clicked_1"/>
+
+        </StackLayout>
+    </Frame>
+    
+
+</ContentPage>
