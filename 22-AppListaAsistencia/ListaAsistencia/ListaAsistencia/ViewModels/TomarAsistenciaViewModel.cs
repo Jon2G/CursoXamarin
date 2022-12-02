@@ -17,7 +17,7 @@ namespace ListaAsistencia.ViewModels
         public ICommand ConfirmarCommand { get; set; }
         public TomarAsistenciaViewModel()
         {
-            Fecha = DateTime.Now;
+            Fecha = DateTime.Today;
             Asistencias = new ObservableCollection<Asistencia>();
             ConfirmarCommand = new Command(Confirmar);
             Refresh();

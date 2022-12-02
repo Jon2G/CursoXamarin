@@ -61,8 +61,8 @@ namespace ListaAsistencia.ViewModels
                 return;
             }
 
-            Regex regexBoleta = new Regex("([0-9]{10})");
-            if (!regexBoleta.IsMatch(Boleta))
+            Regex regexBoleta = new Regex("^([0-9]{10})");
+            if (!regexBoleta.IsMatch(Boleta) || Boleta.Length!=10)
             {
                 Acr.UserDialogs.UserDialogs.Instance.Alert("El formato de la boleta no es válido", "Alerta", "Ok");
                 return;

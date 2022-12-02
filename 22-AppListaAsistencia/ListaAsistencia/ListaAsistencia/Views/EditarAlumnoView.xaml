@@ -58,7 +58,7 @@
                 <Entry Text="{Binding Boleta}"  FontSize="16"
                        Keyboard="Numeric" TextColor="{AppThemeBinding Dark=White,Light=Black}">
                     <Entry.Behaviors>
-                        <behaviors:TextValidationBehavior RegexPattern="([0-9]{10})"
+                        <behaviors:TextValidationBehavior RegexPattern="^([0-9]{10})"
                                                           InvalidStyle="{StaticResource InvalidStyle}" />
                     </Entry.Behaviors>
                 </Entry>
