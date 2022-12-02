@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Calculadora.ViewModel"
-             xmlns:sys="clr-namespace:System;assembly=netstandard"
-             x:Class="Calculadora.MainPage" Title="Calculadora" BackgroundColor="Black"
+             x:Class="Calculadora.MainPage" Title="Calculadora" 
+             BackgroundColor="Black"
              x:DataType="viewmodel:MainPageViewModel">
 
     <StackLayout>

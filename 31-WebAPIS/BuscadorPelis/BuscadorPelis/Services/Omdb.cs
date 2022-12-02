@@ -7,7 +7,7 @@ namespace BuscadorPelis.Services
 {
     public class Omdb
     {
-        private const string ApiKey = "yourApiKey";
+        private const string ApiKey = "d4b194c2";
         public async Task<Movie> Search(string title)
         {
             try

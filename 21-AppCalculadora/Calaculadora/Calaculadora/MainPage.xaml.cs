@@ -7,8 +7,8 @@ namespace Calculadora
     {
         public MainPage()
         {
-            InitializeComponent();
             this.BindingContext = new MainPageViewModel();
+            InitializeComponent();
         }
     }
 }

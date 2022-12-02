@@ -1,12 +1,12 @@
 ﻿using AngouriMath;
 using System;
-using System.ComponentModel;
+using System.ComponentModel; //importa INotifyPropertyChanged
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Calculadora.ViewModel
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    internal class MainPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string Operacion { get; set; }
@@ -21,14 +21,14 @@ namespace Calculadora.ViewModel
         }
         private void Delete()
         {
-            Operacion = string.Empty;
-            Resultado = string.Empty;
+            Operacion = "";
+            Resultado = "";
         }
         private void Calcular(string content)
         {
             if (content == "=")
             {
-                Resultado = Calcular().ToString("N2");
+                Resultado = CalcularAngouri().ToString("N2");
                 Operacion = Resultado;
                 return;
             }
@@ -42,7 +42,7 @@ namespace Calculadora.ViewModel
 
         }
 
-        private float Calcular()
+        private float CalcularAngouri()
         {
             try
             {

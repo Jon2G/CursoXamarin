@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace Calculadora
 {
@@ -16,8 +13,7 @@ namespace Calculadora
 
         protected override void OnStart()
         {
-            RegexUtilities
-            
+
         }
 
         protected override void OnSleep()
