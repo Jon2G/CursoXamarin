@@ -20,17 +20,9 @@ namespace Camara
                 var photo = await MediaPicker.CapturePhotoAsync();
                 await LoadPhotoAsync(photo);
             }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature is not supported on the device
-            }
-            catch (PermissionException pEx)
-            {
-                // Permissions not granted
-            }
             catch (Exception ex)
             {
-                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
+                App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
             }
         }
         private async Task LoadPhotoAsync(FileResult photo)

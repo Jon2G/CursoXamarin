@@ -26,20 +26,24 @@ namespace Calculadora.ViewModel
         }
         private void Calcular(string content)
         {
-            if (content == "=")
+            switch (content)
             {
-                Resultado = CalcularAngouri().ToString("N2");
-                Operacion = Resultado;
-                return;
+                case "=":
+                    Resultado = CalcularAngouri().ToString("N2");
+                    Operacion = Resultado;
+                    return;
+                case "!":
+                    Operacion += "*-1";
+                    Calcular("=");
+                    return;
+                case "%":
+                    Operacion += "/100";
+                    Calcular("=");
+                    return;
+                default:
+                    Operacion += content;
+                    break;
             }
-            else if (content == "!")
-            {
-                Operacion += "*-1";
-                Calcular("=");
-                return;
-            }
-            Operacion += content;
-
         }
 
         private float CalcularAngouri()
