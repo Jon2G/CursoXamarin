@@ -29,7 +29,7 @@ namespace Calculadora.ViewModel
             switch (content)
             {
                 case "=":
-                    Resultado = CalcularAngouri().ToString("N2");
+                    Resultado = CalcularAngouri().ToString("0.#######");
                     Operacion = Resultado;
                     return;
                 case "!":
