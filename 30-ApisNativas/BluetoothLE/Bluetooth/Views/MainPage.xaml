@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Bluetooth.ViewModels"
+             xmlns:contracts="clr-namespace:Plugin.BLE.Abstractions.Contracts;assembly=Plugin.BLE.Abstractions"
+             x:DataType="viewModels:MainPageViewModel"
+             x:Class="Bluetooth.MainPage">
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+
+        <Button Text="Buscar dispositivos cercanos"
+                Command="{Binding ScanDevicesCommand}"/>
+
+        <CollectionView ItemsSource="{Binding Dispositivos}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="contracts:IDevice">
+                    <ContentView Padding="10">
+                        <Frame>
+                            <StackLayout>
+
+                                <Label Text="{Binding Name}"  FontSize="16" 
+                                       FontAttributes="Bold" TextColor="Black"/>
+                                <Label Text="{Binding Id}"  FontSize="14"/>
+                                <Label Text="{Binding State}"  FontSize="14"/>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Rssi:" FontSize="12"/>
+                                    <Label Text="{Binding Rssi}"  FontSize="12"/>
+                                </StackLayout>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>

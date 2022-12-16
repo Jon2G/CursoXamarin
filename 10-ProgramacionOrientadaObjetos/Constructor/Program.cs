@@ -11,6 +11,9 @@ namespace Constructor
 
             Persona persona3 = new Persona("", "");
 
+            Console.WriteLine(persona1.Nombre);
+            persona1.Nombre = "Mar";
+
 
             persona2.ImprimirNombre();
         }

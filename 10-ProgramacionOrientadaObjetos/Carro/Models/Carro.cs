@@ -23,6 +23,7 @@
         public void Frenar()
         {
             Velocidad -= 10;
+
             Console.WriteLine("Frenando..., velocidad actual: " + Velocidad);
             if (Velocidad <= 0)
             {
